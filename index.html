@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>FakeMaps</title>
+  <meta name="description" content="Mappa web basata su OpenStreetMap: cerca luoghi, esplora i dintorni e calcola percorsi.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/maplibre/maplibre-gl.css">
+  <link rel="stylesheet" href="css/app.css?v=6">
+  <script type="module" src="js/app.js?v=6"></script>
+</head>
+<body>
+  <main id="map" aria-label="Mappa"></main>
+
+  <!-- Barra laterale (desktop) -->
+  <nav id="rail" aria-label="Navigazione principale">
+    <button class="rail-menu icon-btn" data-action="open-drawer" aria-label="Menu" title="Menu">
+      <svg class="ic"><use href="assets/icons.svg#i-menu"/></svg>
+    </button>
+    <button class="rail-item" data-action="show-saved" aria-label="Salvati">
+      <svg class="ic"><use href="assets/icons.svg#i-bookmark"/></svg><span>Salvati</span>
+    </button>
+    <button class="rail-item" data-action="show-recent" aria-label="Recenti">
+      <svg class="ic"><use href="assets/icons.svg#i-history"/></svg><span>Recenti</span>
+    </button>
+    <div class="rail-sep" role="presentation"></div>
+    <div id="rail-recent" class="rail-recent"></div>
+    <button class="rail-item rail-bottom" data-action="show-about" aria-label="Informazioni">
+      <svg class="ic"><use href="assets/icons.svg#i-info"/></svg><span>Info</span>
+    </button>
+  </nav>
+
+  <!-- Pannello di dettaglio: colonna a sinistra su desktop, pannello dal basso su telefono -->
+  <aside id="panel" aria-label="Dettagli" data-state="closed" data-sheet="peek">
+    <div class="sheet-grab" aria-hidden="true"><span class="sheet-handle"></span></div>
+    <div id="panel-content" class="panel-content"></div>
+    <button id="panel-toggle" class="panel-toggle" aria-label="Comprimi il riquadro laterale" title="Comprimi il riquadro laterale">
+      <svg class="ic"><use href="assets/icons.svg#i-chevron_left"/></svg>
+    </button>
+  </aside>
+
+  <!-- Ricerca -->
+  <div id="searchbox" role="search">
+    <button class="icon-btn sb-menu" data-action="open-drawer" aria-label="Menu">
+      <svg class="ic"><use href="assets/icons.svg#i-menu"/></svg>
+    </button>
+    <button class="icon-btn sb-back" data-action="back" aria-label="Indietro">
+      <svg class="ic"><use href="assets/icons.svg#i-arrow_back"/></svg>
+    </button>
+    <input id="q" type="search" placeholder="Cerca su FakeMaps" autocomplete="off" spellcheck="false"
+           aria-label="Cerca su FakeMaps" aria-controls="suggestions" aria-expanded="false" role="combobox">
+    <button class="icon-btn sb-search" data-action="search" aria-label="Cerca">
+      <svg class="ic"><use href="assets/icons.svg#i-search"/></svg>
+    </button>
+    <span class="sb-divider" role="presentation"></span>
+    <button class="icon-btn sb-directions accent" data-action="directions" aria-label="Indicazioni stradali" title="Indicazioni stradali">
+      <svg class="ic"><use href="assets/icons.svg#i-directions"/></svg>
+    </button>
+    <button class="icon-btn sb-clear" data-action="clear" aria-label="Chiudi">
+      <svg class="ic"><use href="assets/icons.svg#i-close"/></svg>
+    </button>
+    <ul id="suggestions" class="suggestions" role="listbox" aria-label="Suggerimenti" hidden></ul>
+  </div>
+
+  <!-- Filtri per categoria -->
+  <div id="chips" class="chips" role="toolbar" aria-label="Cerca nei dintorni"></div>
+
+  <!-- Livelli -->
+  <button id="layers-btn" class="layers-btn" aria-label="Livelli" aria-haspopup="true" aria-expanded="false">
+    <span class="layers-thumb" aria-hidden="true"></span>
+    <span class="layers-label"><svg class="ic"><use href="assets/icons.svg#i-layers"/></svg>Livelli</span>
+  </button>
+  <div id="layers-pop" class="layers-pop" role="dialog" aria-label="Tipo di mappa" hidden></div>
+
+  <!-- Controlli mappa -->
+  <div id="controls" class="controls">
+    <button class="ctrl locate" data-action="locate" aria-label="Mostra la tua posizione" title="Mostra la tua posizione">
+      <svg class="ic"><use href="assets/icons.svg#i-my_location"/></svg><span class="locate-label">La tua posizione</span>
+    </button>
+    <div class="ctrl-group zoom">
+      <button class="ctrl" data-action="zoom-in" aria-label="Aumenta lo zoom" title="Aumenta lo zoom">
+        <svg class="ic"><use href="assets/icons.svg#i-add"/></svg>
+      </button>
+      <button class="ctrl" data-action="zoom-out" aria-label="Diminuisci lo zoom" title="Diminuisci lo zoom">
+        <svg class="ic"><use href="assets/icons.svg#i-remove"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu laterale -->
+  <div id="scrim" class="scrim" hidden></div>
+  <nav id="drawer" class="drawer" aria-label="Menu" hidden>
+    <div class="drawer-head">
+      <span class="brand"><svg class="ic"><use href="assets/icons.svg#i-location_on-fill"/></svg>FakeMaps</span>
+      <button class="icon-btn" data-action="close-drawer" aria-label="Chiudi menu">
+        <svg class="ic"><use href="assets/icons.svg#i-close"/></svg>
+      </button>
+    </div>
+    <ul class="drawer-list">
+      <li><button data-action="show-saved"><svg class="ic"><use href="assets/icons.svg#i-bookmark"/></svg>Salvati</button></li>
+      <li><button data-action="show-recent"><svg class="ic"><use href="assets/icons.svg#i-history"/></svg>Recenti</button></li>
+      <li><button data-action="directions"><svg class="ic"><use href="assets/icons.svg#i-directions"/></svg>Indicazioni stradali</button></li>
+      <li><button data-action="open-layers"><svg class="ic"><use href="assets/icons.svg#i-layers"/></svg>Tipo di mappa</button></li>
+      <li><button data-action="share-map"><svg class="ic"><use href="assets/icons.svg#i-share"/></svg>Condividi questa mappa</button></li>
+      <li class="sep" role="presentation"></li>
+      <li><button data-action="show-about"><svg class="ic"><use href="assets/icons.svg#i-info"/></svg>Informazioni e crediti</button></li>
+      <li><a href="https://github.com/lorenzomp7/FakeMaps" target="_blank" rel="noopener"><svg class="ic"><use href="assets/icons.svg#i-link"/></svg>Codice sorgente</a></li>
+    </ul>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

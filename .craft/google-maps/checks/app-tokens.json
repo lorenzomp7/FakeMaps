@@ -1,0 +1,508 @@
+{
+  "mobile": {
+    "styles": {
+      "body": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgb(232, 234, 237)",
+        "radius": "0px",
+        "padding": "0px",
+        "margin": "0px"
+      },
+      "h2": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "18px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px",
+        "margin": "4px 0px 12px"
+      },
+      "a": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "11px",
+        "weight": "400",
+        "lineHeight": "16px",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px",
+        "margin": "0px"
+      },
+      "button": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(95, 99, 104)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "50%",
+        "padding": "0px",
+        "margin": "0px 0px 8px"
+      },
+      "input": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "1px 2px",
+        "margin": "0px"
+      },
+      "nav": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "8px 0px",
+        "margin": "0px"
+      }
+    },
+    "boxes": [
+      {
+        "tag": "main",
+        "id": "map",
+        "x": 0,
+        "y": 0,
+        "w": 375,
+        "h": 900
+      },
+      {
+        "tag": "nav",
+        "id": "rail",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "aside",
+        "id": "panel",
+        "x": 0,
+        "y": 700,
+        "w": 375,
+        "h": 836
+      },
+      {
+        "tag": "div",
+        "id": "layers-pop",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "nav",
+        "id": "drawer",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "palette": [
+      [
+        "rgb(95, 99, 104)",
+        87
+      ],
+      [
+        "rgb(31, 31, 31)",
+        70
+      ],
+      [
+        "rgb(255, 255, 255)",
+        41
+      ],
+      [
+        "rgb(26, 111, 224)",
+        36
+      ],
+      [
+        "rgb(68, 68, 68)",
+        6
+      ],
+      [
+        "rgb(227, 227, 227)",
+        4
+      ],
+      [
+        "rgba(255, 255, 255, 0.8)",
+        2
+      ],
+      [
+        "rgba(255, 255, 255, 0.5)",
+        1
+      ],
+      [
+        "rgb(218, 220, 224)",
+        1
+      ],
+      [
+        "rgba(0, 0, 0, 0.4)",
+        1
+      ],
+      [
+        "rgb(50, 50, 50)",
+        1
+      ]
+    ],
+    "headings": [
+      "H2"
+    ],
+    "smallTargets": 12,
+    "smallTargetList": [
+      "Photon",
+      "OSRM / FOSSGIS",
+      "Ristoranti",
+      "Hotel",
+      "Cose da fare",
+      "Musei",
+      "Trasporti",
+      "Bar",
+      "Farmacie",
+      "Benzina",
+      "Supermercati",
+      "Parchi"
+    ],
+    "overflowX": false,
+    "pageErrors": []
+  },
+  "tablet": {
+    "styles": {
+      "body": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgb(232, 234, 237)",
+        "radius": "0px",
+        "padding": "0px",
+        "margin": "0px"
+      },
+      "a": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "11px",
+        "weight": "400",
+        "lineHeight": "16px",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px",
+        "margin": "0px"
+      },
+      "button": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(95, 99, 104)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "50%",
+        "padding": "0px",
+        "margin": "0px 0px 8px"
+      },
+      "input": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "1px 2px",
+        "margin": "0px"
+      },
+      "nav": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "8px 0px",
+        "margin": "0px"
+      }
+    },
+    "boxes": [
+      {
+        "tag": "main",
+        "id": "map",
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 900
+      },
+      {
+        "tag": "nav",
+        "id": "rail",
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 900
+      },
+      {
+        "tag": "aside",
+        "id": "panel",
+        "x": -400,
+        "y": 8,
+        "w": 408,
+        "h": 884
+      },
+      {
+        "tag": "div",
+        "id": "layers-pop",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "nav",
+        "id": "drawer",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "palette": [
+      [
+        "rgb(95, 99, 104)",
+        77
+      ],
+      [
+        "rgb(31, 31, 31)",
+        62
+      ],
+      [
+        "rgb(255, 255, 255)",
+        26
+      ],
+      [
+        "rgb(26, 111, 224)",
+        7
+      ],
+      [
+        "rgb(68, 68, 68)",
+        6
+      ],
+      [
+        "rgb(227, 227, 227)",
+        3
+      ],
+      [
+        "rgba(255, 255, 255, 0.8)",
+        2
+      ],
+      [
+        "rgba(255, 255, 255, 0.5)",
+        1
+      ],
+      [
+        "rgba(0, 0, 0, 0.4)",
+        1
+      ],
+      [
+        "rgb(50, 50, 50)",
+        1
+      ]
+    ],
+    "headings": [],
+    "smallTargets": 15,
+    "smallTargetList": [
+      "Photon",
+      "OSRM / FOSSGIS",
+      "Ristoranti",
+      "Hotel",
+      "Cose da fare",
+      "Musei",
+      "Trasporti",
+      "Bar",
+      "Farmacie",
+      "Benzina",
+      "Supermercati",
+      "Parchi",
+      "Mostra la tua posizione",
+      "Aumenta lo zoom",
+      "Diminuisci lo zoom"
+    ],
+    "overflowX": false,
+    "pageErrors": []
+  },
+  "desktop": {
+    "styles": {
+      "body": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgb(232, 234, 237)",
+        "radius": "0px",
+        "padding": "0px",
+        "margin": "0px"
+      },
+      "a": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "11px",
+        "weight": "400",
+        "lineHeight": "16px",
+        "color": "rgb(68, 68, 68)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "0px",
+        "margin": "0px"
+      },
+      "button": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(95, 99, 104)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "50%",
+        "padding": "0px",
+        "margin": "0px 0px 8px"
+      },
+      "input": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "padding": "1px 2px",
+        "margin": "0px"
+      },
+      "nav": {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "lineHeight": "20px",
+        "color": "rgb(31, 31, 31)",
+        "bg": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "padding": "8px 0px",
+        "margin": "0px"
+      }
+    },
+    "boxes": [
+      {
+        "tag": "main",
+        "id": "map",
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      {
+        "tag": "nav",
+        "id": "rail",
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 900
+      },
+      {
+        "tag": "aside",
+        "id": "panel",
+        "x": -400,
+        "y": 8,
+        "w": 408,
+        "h": 884
+      },
+      {
+        "tag": "div",
+        "id": "layers-pop",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "nav",
+        "id": "drawer",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "palette": [
+      [
+        "rgb(95, 99, 104)",
+        77
+      ],
+      [
+        "rgb(31, 31, 31)",
+        62
+      ],
+      [
+        "rgb(255, 255, 255)",
+        26
+      ],
+      [
+        "rgb(26, 111, 224)",
+        7
+      ],
+      [
+        "rgb(68, 68, 68)",
+        6
+      ],
+      [
+        "rgb(227, 227, 227)",
+        3
+      ],
+      [
+        "rgba(255, 255, 255, 0.8)",
+        2
+      ],
+      [
+        "rgba(255, 255, 255, 0.5)",
+        1
+      ],
+      [
+        "rgba(0, 0, 0, 0.4)",
+        1
+      ],
+      [
+        "rgb(50, 50, 50)",
+        1
+      ]
+    ],
+    "headings": [],
+    "smallTargets": 15,
+    "smallTargetList": [
+      "Photon",
+      "OSRM / FOSSGIS",
+      "Ristoranti",
+      "Hotel",
+      "Cose da fare",
+      "Musei",
+      "Trasporti",
+      "Bar",
+      "Farmacie",
+      "Benzina",
+      "Supermercati",
+      "Parchi",
+      "Mostra la tua posizione",
+      "Aumenta lo zoom",
+      "Diminuisci lo zoom"
+    ],
+    "overflowX": false,
+    "pageErrors": []
+  }
+}

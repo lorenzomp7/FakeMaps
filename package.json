@@ -1,0 +1,29 @@
+{
+  "name": "fakemaps",
+  "version": "1.0.0",
+  "description": "Mappa web con interfaccia in stile Google Maps, basata su OpenStreetMap",
+  "scripts": {
+    "build:assets": "node tools/build-assets.mjs",
+    "serve": "npx --yes http-server . -p 4173 -c-1",
+    "capture": "node .craft/scripts/capture.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorenzomp7/FakeMaps.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorenzomp7/FakeMaps/issues"
+  },
+  "homepage": "https://github.com/lorenzomp7/FakeMaps#readme",
+  "devDependencies": {
+    "@fontsource/roboto": "^5.3.0",
+    "@material-symbols/svg-400": "^0.49.0",
+    "maplibre-gl": "^6.19.0",
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.65.1",
+    "pngjs": "^7.0.0"
+  },
+  "private": true,
+  "type": "module"
+}
