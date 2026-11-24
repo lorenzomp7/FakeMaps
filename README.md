@@ -68,6 +68,10 @@ npm run serve          # http://localhost:4173
 ```
 È un sito statico. Ogni push su `main` lo pubblica su GitHub Pages tramite `.github/workflows/pages.yml`.
 
+## Autori
+- [Lorenzo Mainetti](https://github.com/lorenzomp7): idea, direzione del progetto e revisione
+- Claude (Anthropic): scrittura del codice, sotto la guida di Lorenzo
+
 ## Crediti e licenze
 - Dati © [collaboratori di OpenStreetMap](https://www.openstreetmap.org/copyright), ODbL
 - [MapLibre GL JS](https://maplibre.org), BSD-3-Clause (`vendor/maplibre/LICENSE.txt`)
